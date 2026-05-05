@@ -1,71 +1,53 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // ==========================================
-    // 1. ANIMAÇÃO DA HERO SECTION (Intro Cinematográfica)
-    // ==========================================
-    
-    // Criamos uma Timeline do GSAP. 
-    // O gsap.timeline() permite encadear animações facilmente.
-    const heroTl = gsap.timeline({ 
-        defaults: { ease: "power4.out" } // ease Rockstar: começa rápido e desacelera suavemente
-    });
+    // Garante que o plugin está registrado
+    gsap.registerPlugin(ScrollTrigger);
 
-    // Estado inicial: Escondemos os elementos antes da animação começar
-    gsap.set(".title-monumental", { y: 50, opacity: 0, clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" });
-    gsap.set(".subtitle-hero", { y: 20, opacity: 0 });
-    gsap.set(".btn-solid", { y: 20, opacity: 0 });
-    gsap.set(".support-list li", { x: -20, opacity: 0 });
-    gsap.set(".navbar", { y: -50, opacity: 0 });
+    const heroVideo = document.getElementById("hero-video");
 
-    // Sequência de entrada
-    heroTl
-        // 1. Revela a Navbar descendo
-        .to(".navbar", {
-            y: 0,
-            opacity: 1,
+    // Função que cria a animação (isolada para podermos chamar no momento certo)
+    function initHeroAnimation() {
+        console.log("Vídeo carregado. Duração:", heroVideo.duration); // Para debug no console (F12)
+
+        const heroTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#hero-scrubber",
+                start: "top top",
+                end: "+=200%", // Prende a tela por 2 "alturas" de scroll
+                scrub: 1, // Suavidade de 1 segundo (evita engasgos)
+                pin: true,
+                // markers: true, // DESCOMENTE ESTA LINHA SE QUISER VER AS LINHAS GUIA DO GSAP NA TELA
+            }
+        });
+
+        // A. Avança os frames do vídeo
+        heroTl.to(heroVideo, {
+            currentTime: heroVideo.duration || 1, // Fallback se a duração não for lida
             duration: 1,
-            delay: 0.2 // Um pequeno respiro antes de começar
-        })
-        // 2. O Título Monumental surge de baixo para cima revelando-se (Clip-path faz o efeito máscara)
-        .to(".title-monumental", {
-            y: 0,
-            opacity: 1,
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-            duration: 1.5
-        }, "-=0.5") // O "-=0.5" faz essa animação começar meio segundo ANTES da navbar terminar
-        // 3. Subtítulo sobe suavemente
-        .to(".subtitle-hero", {
-            y: 0,
-            opacity: 1,
-            duration: 1
-        }, "-=1")
-        // 4. O Botão (CTA) aparece
-        .to(".btn-solid", {
-            y: 0,
-            opacity: 1,
-            duration: 0.8
-        }, "-=0.8")
-        // 5. Os itens da lista de apoio entram um por um (Stagger)
-        .to(".support-list li", {
-            x: 0,
-            opacity: 1,
-            duration: 0.8,
-            stagger: 0.15 // Cria o efeito de cascata entre os itens da lista
-        }, "-=0.6");
+            ease: "none"
+        }, 0);
 
-    // ==========================================
-    // EFEITOS EXTRAS (Para polimento)
-    // ==========================================
-    
-    // Efeito de escurecer a Navbar ao scrollar
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(5, 5, 5, 0.95)';
-            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
-        } else {
-            navbar.style.background = 'rgba(10, 10, 10, 0.8)';
-            navbar.style.boxShadow = 'none';
-        }
-    });
+        // B. Move o vídeo levemente para a direita
+        let moveX = window.innerWidth > 768 ? "20vw" : "0vw"; 
+        heroTl.to(".video-scroll-wrapper", {
+            x: moveX,
+            duration: 1,
+            ease: "power2.inOut"
+        }, 0);
+
+        // C. Revela o texto
+        heroTl.fromTo(".hero-text-scroll", 
+            { opacity: 0, x: -50 }, 
+            { opacity: 1, x: 0, duration: 0.5 }, 
+            0.2 // Começa quando o scroll está em 20%
+        );
+    }
+
+    // VERIFICAÇÃO À PROVA DE BALAS: O vídeo já tem os metadados?
+    if (heroVideo.readyState >= 1) {
+        // Se já carregou (está no cache), inicia a animação na hora
+        initHeroAnimation();
+    } else {
+        // Se não carregou, espera o evento disparar
+        heroVideo.addEventListener('loadedmetadata', initHeroAnimation);
+    }
 });

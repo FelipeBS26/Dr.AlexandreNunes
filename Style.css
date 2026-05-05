@@ -144,6 +144,38 @@ img, video {
     flex: 1;
 }
 
+/* --- ESTILOS PARA O HERO SCRUBBING --- */
+#hero-scrubber {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-bg-dark);
+}
+
+.video-scroll-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    /* Começa centralizado */
+    transform-origin: center center;
+}
+
+#hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que preencha a tela sem distorcer */
+}
+
+.hero-text-scroll {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    opacity: 0; /* Começa invisível, o GSAP vai revelar */
+    /* Empurra o texto para não encostar na paciente quando ela for pra direita */
+    padding-top: 10vh; 
+}
 
 
 /* ==========================================================================

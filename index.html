@@ -27,24 +27,27 @@
 
     <main>
         <!-- ==========================================
-             FRAME 1 | HERO
+             FRAME 1 | HERO (VIDEO SCRUBBING)
         =========================================== -->
-        <section id="hero" class="section-fullscreen">
-            <div class="video-bg-placeholder">
-                <!-- Vídeo 4k em background -->
+        <section id="hero-scrubber" class="section-fullscreen">
+            <!-- Contêiner do vídeo que vai deslizar para a direita -->
+            <div class="video-scroll-wrapper">
+                <!-- Importante: playsinline, muted, e preload para garantir controle via JS -->
+                <video id="hero-video" src="assets/Hero.mp4" muted playsinline preload="metadata"></video>
+                <div class="video-overlay"></div>
             </div>
             
+            <!-- Contêiner do texto que vai aparecer na esquerda -->
             <div class="container hero-container">
-                <div class="hero-content">
+                <div class="hero-text-scroll">
                     <h1 class="title-monumental">EM HARMONIA<br>COM VOCÊ.</h1>
                     <p class="subtitle-hero">Rinoplastia personalizada que respeita sua anatomia, melhora a respiração e valoriza sua identidade facial.</p>
                     
-                    <button class="btn-solid mt-xl">Quero avaliar meu caso</button>
+                    <button class="btn-solid mt-md">Quero avaliar meu caso</button>
                     
-                    <ul class="support-list mt-xl">
+                    <ul class="support-list mt-md">
                         <li><span class="highlight">+</span> Mais de 26 anos de experiência</li>
-                        <li><span class="highlight">+</span> Resultados naturais, sem exageros</li>
-                        <li><span class="highlight">+</span> Atendimento em Brasília, Goiânia e SP</li>
+                        <li><span class="highlight">+</span> Resultados naturais</li>
                     </ul>
                 </div>
             </div>
@@ -155,6 +158,12 @@
     <script src="script.js"></script>
     <!-- GSAP Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    
+    <!-- 2. ScrollTrigger Plugin (ESSENCIAL PARA O SCROLL FUNCIONAR) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    
+</body>
     
 </body>
 </body>
