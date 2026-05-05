@@ -1,21 +1,27 @@
 /* ==========================================================================
-   1. VARIÁVEIS (DESIGN SYSTEM PREMIUM)
+   1. VARIÁVEIS (DARK ELEGANCE)
    ========================================================================== */
 :root {
-    /* Cores */
-    --color-bg-dark: #0A0A0A;
-    --color-bg-darker: #050505;
-    --color-text-main: #F5F5F7;
-    --color-text-muted: #888888;
-    --color-accent: #B0A89A; /* Titânio/Bronze */
-    --color-border: rgba(255, 255, 255, 0.1);
+    /* O fundo escuro agora tem um traço quase imperceptível de marrom/vermelho para harmonizar */
+    --color-bg-dark: #0c0a0a; 
+    --color-bg-darker: #080606;
     
-    /* Tipografia */
-    --font-heading: 'Syncopate', sans-serif;
+    /* Cores de Texto */
+    --color-text-main: #FDFBF7; /* Um branco levemente perolado, menos agressivo aos olhos */
+    --color-text-muted: #A8A09E;
+    
+    /* A Paleta da Clínica */
+    --color-accent: #732326;      /* Vermelho Vinho Claro */
+    --color-accent-dark: #631E21; /* Vermelho Vinho Escuro */
+    
+    /* Linhas muito finas e elegantes */
+    --color-border: rgba(253, 251, 247, 0.08);
+    
+    /* Novas Fontes */
+    --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Inter', sans-serif;
     
-    /* Transições */
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-smooth: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ==========================================================================
@@ -48,47 +54,53 @@ img, video {
 }
 
 /* ==========================================================================
-   3. TIPOGRAFIA
+   3. TIPOGRAFIA (ESTILO REVISTA PREMIUM)
    ========================================================================== */
 .title-monumental {
     font-family: var(--font-heading);
-    /* clamp(min, ideal, max) - Adapta-se fluidamente */
-    font-size: clamp(2.5rem, 6vw, 7rem); 
-    line-height: 0.95;
-    letter-spacing: -0.05em;
-    text-transform: uppercase;
+    font-size: clamp(3rem, 7vw, 6.5rem); 
+    line-height: 0.9;
+    font-weight: 300; /* Mais fino = Mais elegante */
+    letter-spacing: -0.02em;
     color: var(--color-text-main);
+    text-transform: none; /* Retiramos o tudo maiúsculo agressivo */
+}
+
+/* Opcional: Para dar um toque chique, podemos colocar algumas palavras em itálico no HTML */
+.title-monumental i, .title-section i {
+    font-style: italic;
+    color: var(--color-accent); /* A palavra em itálico ganha o tom vinho */
 }
 
 .title-section {
-    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.8rem);
     font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    letter-spacing: 0;
 }
 
 .title-punchline {
     font-family: var(--font-heading);
-    font-size: clamp(1.2rem, 3vw, 2.2rem);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     color: var(--color-accent);
-    text-transform: uppercase;
+    font-style: italic;
 }
 
 .subtitle-hero {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
     color: var(--color-text-muted);
-    max-width: 600px;
-    margin-top: 1.5rem;
-}
-
-.text-body {
-    font-size: 1.1rem;
-    color: var(--color-text-muted);
+    max-width: 500px;
+    margin-top: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
 }
 
 .text-impact {
-    font-size: clamp(1.2rem, 2vw, 1.8rem);
-    font-weight: 600;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-style: italic;
     color: var(--color-text-main);
 }
 
@@ -216,37 +228,56 @@ img, video {
     color: var(--color-accent);
 }
 
-/* Botões Estilo Rockstar */
+/* ==========================================================================
+   BOTÕES (DELICADOS E COM A COR DA MARCA)
+   ========================================================================== */
 .btn-solid, .btn-outline {
     display: inline-block;
-    padding: 1rem 2.5rem;
+    padding: 1rem 3rem;
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     cursor: pointer;
     transition: var(--transition-smooth);
-    border: 1px solid var(--color-text-main);
+    border-radius: 2px; /* Cantos levemente arredondados quebram a agressividade */
 }
 
 .btn-solid {
-    background: var(--color-text-main);
-    color: var(--color-bg-dark);
+    background: var(--color-accent);
+    color: #fff;
+    border: 1px solid var(--color-accent);
 }
 
 .btn-solid:hover {
-    background: transparent;
-    color: var(--color-text-main);
+    background: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
 }
 
 .btn-outline {
     background: transparent;
     color: var(--color-text-main);
+    border: 1px solid var(--color-border);
 }
 
 .btn-outline:hover {
-    background: var(--color-text-main);
-    color: var(--color-bg-dark);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+}
+
+/* Navbar mais sutil */
+.navbar {
+    background: rgba(12, 10, 10, 0.6);
+    backdrop-filter: blur(15px);
+    border-bottom: 0.5px solid var(--color-border);
+}
+.logo {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    color: var(--color-text-main);
 }
 
 /* Hero Background Placeholder */
