@@ -48,7 +48,8 @@ nav {
   transition: background var(--transition), box-shadow var(--transition);
 }
 nav.scrolled {
-  background: rgba(13, 27, 42, 0.97);
+
+  background: rgba(106, 4, 15, 0.97); 
   box-shadow: 0 4px 30px rgba(0,0,0,0.3);
   padding: 14px 60px;
 }
