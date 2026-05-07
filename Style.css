@@ -11,13 +11,15 @@
   --cream: #f8f4ee;
   --cream-dark: #ede8df;
   --white: #ffffff;
-  --text-dark: #1a1a2e;
-  --text-mid: #4a4a6a;
-  --text-light: #8a8aaa;
+  --text-dark: #2b1c1c;  
+  --text-mid: #5c4d4d;   
+  --text-light: #9c8b8b;
   --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth;
+       font-size: 18px
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -48,7 +50,6 @@ nav {
   transition: background var(--transition), box-shadow var(--transition);
 }
 nav.scrolled {
-
   background: rgba(106, 4, 15, 0.97); 
   box-shadow: 0 4px 30px rgba(0,0,0,0.3);
   padding: 14px 60px;
@@ -356,7 +357,7 @@ section { position: relative; }
   align-items: center;
   justify-content: center;
   gap: 16px;
-  background: linear-gradient(135deg, var(--navy) 0%, #1e3148 100%);
+  background: linear-gradient(135deg, var(--navy) 0%, #370208 100%);
 }
 .id-image-placeholder svg { opacity: 0.3; }
 .id-image-placeholder span {
@@ -514,7 +515,7 @@ section { position: relative; }
   align-items: center;
   justify-content: flex-end;
   padding: 20px;
-  background: linear-gradient(160deg, #1a2f45 0%, var(--navy) 100%);
+  background: linear-gradient(160deg, #5c040e 0%, var(--navy) 100%);
 }
 .ba-label {
   font-size: 0.7rem;
@@ -834,7 +835,7 @@ section { position: relative; }
   position: relative;
 }
 .func-image-main {
-  background: linear-gradient(160deg, #1a2f45, var(--navy));
+  background: linear-gradient(160deg, #5c040e, var(--navy));
   border-radius: 4px;
   aspect-ratio: 4/5;
   display: flex;
@@ -855,9 +856,9 @@ section { position: relative; }
   bottom: 30px;
   left: 30px;
   right: 30px;
-  background: rgba(13, 27, 42, 0.92);
+  background: rgba(106, 4, 15, 0.92);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(201,169,110,0.2);
+  border: 1px solid rgba(252, 186, 4, 0.2);
   border-radius: 4px;
   padding: 20px 24px;
   display: flex;
@@ -1199,7 +1200,7 @@ section { position: relative; }
   cursor: pointer;
   transition: all var(--transition);
 }
-.btn-form-next:hover { background: #1e3148; }
+.btn-form-next:hover { background: #370208; }
 .btn-form-submit {
   flex: 1;
   background: var(--gold);
@@ -1257,7 +1258,7 @@ section { position: relative; }
 
 /* ── FOOTER ── */
 footer {
-  background: #080f18;
+  background: #2b0105; 
   padding: 60px 0 30px;
 }
 .footer-top {
