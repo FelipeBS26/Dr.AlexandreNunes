@@ -270,42 +270,64 @@ img {
 }
 
 /* ==========================================================================
-   HEADER: RESPONSIVIDADE (MOBILE)
+   HEADER: RESPONSIVIDADE E MENU FLUTUANTE (MOBILE)
    ========================================================================== */
 @media (max-width: 992px) {
     .mobile-menu-btn {
-        display: block; 
+        display: block !important; 
+        position: relative;
+        z-index: 1005 !important; 
     }
 
-    /* Transforma a barra num menu lateral */
+    /* O novo "Quadrado Translúcido" (Menu Dropdown Flutuante) */
     .main-nav {
-        position: fixed;
-        top: 0;
-        right: -100%; 
-        width: 280px;
-        height: 100vh;
-        background-color: var(--accent-primary);
-        padding: 90px 30px 30px;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-        transition: right 0.4s ease;
-        z-index: 1000;
-        display: block; 
+        position: absolute !important; /* Fica posicionado em relação ao header */
+        top: calc(100% + 15px); /* Fica logo abaixo do botão hambúrguer */
+        right: 0; /* Alinhado à direita */
+        width: auto;
+        min-width: 220px; /* Largura mínima para os 3 botões caberem bem */
+        height: auto; /* Remove o 100vh para não ocupar a tela toda */
+        
+        /* Estilo Translúcido (Efeito Vidro / Glassmorphism) */
+        background-color: rgba(102, 31, 34, 0.85) !important; /* Vermelho escuro com 85% de opacidade */
+        backdrop-filter: blur(10px); /* Desfoca o que estiver atrás do menu */
+        border: 1px solid rgba(255, 255, 255, 0.15); /* Borda fina para dar acabamento */
+        border-radius: var(--radius-md); /* Cantos arredondados */
+        padding: 25px 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        
+        /* Estado Inicial (Escondido) */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px); /* Fica levemente para cima */
+        transition: all 0.3s ease !important; /* Transição suave de fade e movimento */
+        
+        z-index: 1002 !important;
+        display: flex !important; 
+        flex-direction: column;
     }
 
+    /* CLASSE QUE ABRE O MENU QUADRADO */
     .main-nav.menu-open {
-        right: 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important; /* Desce para a posição original */
     }
 
-    /* Empilhamento apenas no mobile */
+    /* Ajuste da lista de links (Centralizados dentro do quadrado) */
     .main-nav ul {
         flex-direction: column !important; 
-        align-items: flex-start;
-        gap: 25px;
+        align-items: center !important; /* Centraliza os textos */
+        gap: 20px;
+        width: 100%;
     }
 
     .main-nav ul li a {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         display: block;
+        color: #ffffff !important;
+        text-align: center;
+        letter-spacing: 0.5px;
     }
 }
 
@@ -1826,7 +1848,7 @@ img {
 }
 
 @media (max-width: 480px) {
-    .hero h1 { 
+    .hero h1 {
         font-size: 2.2rem;
     }
     .hero-features {
