@@ -293,7 +293,7 @@ img {
     }
 
     .main-nav.menu-open {
-        right: 0; 
+        right: 0 !important;
     }
 
     /* Empilhamento apenas no mobile */
