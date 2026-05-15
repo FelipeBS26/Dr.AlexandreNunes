@@ -1,664 +1,531 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Alexandre Nunes | Rinoplastia de Alta Performance</title>
-  <meta name="description" content="Especialista em rinoplastia funcional e estética. Resultados naturais com técnica avançada. Agende sua consulta.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rinoplastia personalizada com o Dr. Alexandre Nunes. Resultados naturais e preservação da função respiratória.">
+    <title>Dr. Alexandre Nunes - Rinoplastia Personalizada</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav id="navbar">
-  <a href="#hero" class="nav-logo">Dr. Alexandre <span>Nunes</span></a>
-  <a href="#contact" class="nav-cta">Agendar Consulta</a>
-</nav>
+    <!-- O header agora fica dentro do contexto visual do Hero ou com position absolute -->
+<header class="site-header" id="site-header">
+    <div class="container header-content">
+        <div class="brand">
+            <div class="logo-image-placeholder">
+                <img src="assets/logo_v_r.png" alt="Logo AN" id="logo-img">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">DR. ALEXANDRE NUNES</span>
+                <span class="brand-sub">RINOPLASTIA</span>
+            </div>
+        </div>
+        
+        <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+            <ul>
+                <li><a href="#rinoplastia">A Cirurgia</a></li>
+                <li><a href="#beneficios">Resultados</a></li>
+                <li><a href="#quiz">Pré-Avaliação</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <a href="#agendar" class="btn btn-header">AGENDAR AVALIAÇÃO</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</header>
 
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-lines"></div>
-  <div class="hero-content">
-    <div class="hero-left">
-      <div class="hero-badge">Especialista em Rinoplastia</div>
-      <h1 class="hero-title">
-        Seu nariz perfeito,<br>
-        <span class="accent">naturalmente seu.</span>
-      </h1>
-      <p class="hero-subtitle">Cirurgia estética e funcional com técnica de precisão<br>e resultados que respeitam a sua identidade.</p>
-      <div class="hero-divider"></div>
-      <p class="hero-desc">
-        Você não precisa de um nariz diferente — você precisa de um nariz que se harmonize perfeitamente com o seu rosto, que você respire com facilidade e que te faça sentir em paz quando se olhar no espelho.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">
-          Quero minha avaliação
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#differentials" class="btn-secondary">
-          Conhecer o método
-        </a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-number">+2.000</div>
-          <div class="stat-label">Cirurgias<br>realizadas</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">Anos de<br>experiência</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">98%</div>
-          <div class="stat-label">Satisfação<br>dos pacientes</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span>Rolar</span>
-  </div>
-</section>
+<main>
+    <!-- SEÇÃO: HERO -->
+    <!-- A classe de background aplicará a imagem que pega a tela toda -->
+    <section id="inicio" class="hero" style="background-image: url('assets/hero-3.jpeg');">
+        
+        <!-- Gradiente opcional para garantir a leitura do texto caso a imagem varie -->
+        <div class="hero-overlay"></div>
 
-<section id="identification">
-  <div class="container">
-    <div class="id-grid">
-      <div class="id-text fade-up">
-        <div class="section-label">Sobre o Dr. Alexandre Nunes</div>
-        <h2 class="section-title" style="color:var(--navy); margin-bottom:24px;">
-          Cirurgião especialista em<br>
-          <span style="color:var(--gold-dark); font-style:italic;">harmonia facial</span>
-        </h2>
-        <p>Formado pela Universidade de São Paulo e com especialização em centros de referência na Europa, o Dr. Alexandre Nunes construiu ao longo de 15 anos uma carreira focada em um único objetivo: <strong>devolver ao paciente a confiança que ele merece.</strong></p>
-        <p>Cada cirurgia é planejada individualmente, levando em consideração as proporções do rosto, a etnia, o estilo de vida e, acima de tudo, o desejo real do paciente — não um padrão de beleza imposto.</p>
-        <p>Com técnica apurada e olhar artístico, o Dr. Nunes combina o rigor científico da cirurgia moderna com a sensibilidade necessária para criar resultados que parecem ter sempre sido assim.</p>
-        <div class="id-quote">
-          <p>"Meu trabalho não é mudar quem você é. É revelar a melhor versão do que você já tem."</p>
-        </div>
-        <div class="id-credentials">
-          <span class="credential-tag">CRM-SP 123456</span>
-          <span class="credential-tag">Membro SBCP</span>
-          <span class="credential-tag">Fellow ISAPS</span>
-          <span class="credential-tag">Membro BRAFIS</span>
-          <span class="credential-tag">Especialista CFM</span>
-        </div>
-      </div>
-      <div class="id-image-wrap fade-up fade-up-delay-2">
-        <div class="id-image-frame">
-          <div class="id-image-placeholder">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
-              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-            </svg>
-            <span>Foto do Médico</span>
-          </div>
-        </div>
-        <div class="id-image-decor"></div>
-        <div class="id-image-decor2"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="pain">
-  <div class="container">
-    <div class="fade-up" style="max-width:620px; margin-bottom:60px;">
-      <div class="section-label" style="color:var(--gold);">Eu entendo você</div>
-      <h2 class="section-title" style="color:var(--white);">
-        Se você chegou até aqui,<br>
-        <span style="color:var(--gold); font-style:italic;">provavelmente se identifica</span><br>
-        com uma dessas situações:
-      </h2>
-    </div>
-    <div class="pain-grid">
-      <div class="pain-card fade-up fade-up-delay-1">
-        <div class="pain-number">01</div>
-        <div class="pain-title">O espelho não reflete quem você se sente</div>
-        <p class="pain-desc">Você olha para o seu reflexo e algo não parece certo. Não é sobre vaidade — é sobre se sentir em paz com a própria imagem e parar de evitar fotos e câmeras.</p>
-      </div>
-      <div class="pain-card fade-up fade-up-delay-2">
-        <div class="pain-number">02</div>
-        <div class="pain-title">Dificuldade para respirar que afeta sua qualidade de vida</div>
-        <p class="pain-desc">Você ronca, tem o nariz entupido constantemente, acorda cansado ou sente falta de ar durante atividades físicas. Isso não é normal — e tem solução.</p>
-      </div>
-      <div class="pain-card fade-up fade-up-delay-3">
-        <div class="pain-number">03</div>
-        <div class="pain-title">Medo de um resultado artificial ou "operado"</div>
-        <p class="pain-desc">Você já viu casos que parecem caricatura. O maior medo é sair diferente, artificial, ou com um nariz que não combina com o seu rosto e sua personalidade.</p>
-      </div>
-    </div>
-    <div class="pain-cta-wrap fade-up">
-      <p>"Você não está sozinho. Essas preocupações são completamente legítimas.<br>E existe uma abordagem que resolve cada uma delas."</p>
-      <a href="#contact" class="btn-primary">Quero entender meu caso</a>
-    </div>
-  </div>
-</section>
-
-<section id="transformation">
-  <div class="container">
-    <div class="transform-grid">
-      <div class="fade-up">
-        <div class="section-label">A Transformação</div>
-        <h2 class="section-title transform-title">
-          Como será a sua vida<br>
-          <span style="color:var(--gold-dark); font-style:italic;">após a cirurgia</span>
-        </h2>
-        <ul class="transform-list">
-          <li>
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
-            <span>Você vai se olhar no espelho com satisfação, pela primeira vez sentindo que a imagem reflete quem você realmente é</span>
-          </li>
-          <li>
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
-            <span>Respiração livre, sono de qualidade e energia renovada para o dia a dia</span>
-          </li>
-          <li>
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
-            <span>Resultado tão natural que as pessoas vão notar que você ficou mais bonito — mas não vão saber exatamente por quê</span>
-          </li>
-          <li>
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
-            <span>Liberdade de se fotografar, aparecer nas câmeras e estar presente nos momentos importantes da sua vida</span>
-          </li>
-          <li>
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
-            <span>A confiança que vem de saber que você fez a escolha certa, com o especialista certo</span>
-          </li>
-        </ul>
-        <a href="#contact" class="btn-primary" style="background:var(--navy); color:var(--white);">
-          Quero essa transformação
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-      <div class="transform-image-wrap fade-up fade-up-delay-2">
-        <div class="before-after-card">
-          <div class="ba-placeholder">
-            <span class="ba-label">Antes</span>
-          </div>
-        </div>
-        <div class="before-after-card">
-          <div class="ba-placeholder" style="background: linear-gradient(160deg, #243b55, #1a2f45);">
-            <span class="ba-label" style="color:var(--gold);">Depois</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="differentials">
-  <div class="container">
-    <div class="diff-header fade-up">
-      <div class="section-label" style="justify-content:center;">O Método</div>
-      <h2 class="section-title" style="color:var(--navy); margin-bottom:16px;">
-        Por que o Dr. Alexandre Nunes<br>
-        <span style="color:var(--gold-dark); font-style:italic;">é diferente</span>
-      </h2>
-      <p class="section-subtitle" style="color:var(--text-mid); margin:0 auto;">Cada detalhe do nosso processo foi desenhado para garantir que você chegue ao resultado que imaginou — com segurança e naturalidade.</p>
-    </div>
-    <div class="diff-grid">
-      <div class="diff-card fade-up fade-up-delay-1">
-        <div class="diff-icon">🎯</div>
-        <div class="diff-title">Planejamento Digital 3D</div>
-        <p class="diff-desc">Simulamos o resultado final em 3D antes da cirurgia, para que você veja e aprove o resultado esperado. Sem surpresas, sem decepções.</p>
-      </div>
-      <div class="diff-card fade-up fade-up-delay-2">
-        <div class="diff-icon">🔬</div>
-        <div class="diff-title">Técnica Ultrassônica</div>
-        <p class="diff-desc">Utilizamos equipamentos piezoeléctricos de última geração que garantem precisão milimétrica, menor sangramento e recuperação mais rápida.</p>
-      </div>
-      <div class="diff-card fade-up fade-up-delay-3">
-        <div class="diff-icon">🎨</div>
-        <div class="diff-title">Abordagem Artística</div>
-        <p class="diff-desc">Cada nariz é esculpido respeitando as proporções áureas do seu rosto, sua etnia e características únicas. O resultado é harmonia, não padronização.</p>
-      </div>
-      <div class="diff-card fade-up fade-up-delay-4">
-        <div class="diff-icon">🛡️</div>
-        <div class="diff-title">Acompanhamento Total</div>
-        <p class="diff-desc">Desde a consulta inicial até a total cicatrização, você tem acesso direto ao Dr. Alexandre. Suporte completo em cada etapa da jornada.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="authority">
-  <div class="container">
-    <div class="auth-grid">
-      <div class="fade-up">
-        <div class="section-label" style="color:var(--gold);">Formação & Autoridade</div>
-        <h2 class="section-title auth-title">
-          Uma trajetória construída<br>
-          <span style="color:var(--gold); font-style:italic;">com excelência</span>
-        </h2>
-        <p class="auth-subtitle">
-          Mais de 15 anos dedicados exclusivamente à cirurgia do nariz, com formação nos melhores centros do Brasil e do mundo.
-        </p>
-        <div class="auth-credentials">
-          <div class="cred-item"><div class="cred-dot"></div><div class="cred-text">Graduação e Residência em Cirurgia Plástica — USP / Hospital das Clínicas</div></div>
-          <div class="cred-item"><div class="cred-dot"></div><div class="cred-text">Fellowship em Rinoplastia — Clínica Universidad de Navarra, Espanha</div></div>
-          <div class="cred-item"><div class="cred-dot"></div><div class="cred-text">Membro Titular da Sociedade Brasileira de Cirurgia Plástica (SBCP)</div></div>
-          <div class="cred-item"><div class="cred-dot"></div><div class="cred-text">Professor Convidado em Congressos Nacionais e Internacionais</div></div>
-          <div class="cred-item"><div class="cred-dot"></div><div class="cred-text">Publicações em revistas científicas indexadas na área de rinoplastia</div></div>
-          <div class="cred-item"><div class="cred-dot"></div><div class="cred-text">+2.000 rinoplastias realizadas com índice de revisão &lt; 2%</div></div>
-        </div>
-      </div>
-      <div class="auth-testimonials fade-up fade-up-delay-2">
-        <div class="testimonial-card">
-          <span class="quote-mark">&ldquo;</span>
-          <p class="testimonial-text">Passei anos evitando fotos. Hoje, seis meses após a cirurgia, não consigo parar de me fotografar. O Dr. Alexandre entendeu exatamente o que eu queria — e entregou muito mais do que esperava.</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">M</div>
-            <div>
-              <div class="stars">★★★★★</div>
-              <div class="author-name">Mariana S.</div>
-              <div class="author-detail">São Paulo — Paciente, 31 anos</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <span class="quote-mark">&ldquo;</span>
-          <p class="testimonial-text">Fiz rinoplastia funcional por causa da dificuldade respiratória. Além de respirar muito melhor, o resultado estético ficou incrível. Recuperação tranquila e suporte constante da equipe.</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">R</div>
-            <div>
-              <div class="stars">★★★★★</div>
-              <div class="author-name">Rafael M.</div>
-              <div class="author-detail">Campinas — Paciente, 27 anos</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <span class="quote-mark">&ldquo;</span>
-          <p class="testimonial-text">Tinha muito medo de um resultado artificial. O doutor me tranquilizou em cada etapa. Resultado: completamente natural, harmônico. Minhas amigas me perguntam se eu emagreci!</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">C</div>
-            <div>
-              <div class="stars">★★★★★</div>
-              <div class="author-name">Carolina T.</div>
-              <div class="author-detail">Rio de Janeiro — Paciente, 34 anos</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="natural">
-  <div class="container">
-    <div class="natural-grid">
-      <div class="fade-up">
-        <div class="section-label">Resultados Naturais</div>
-        <h2 class="section-title natural-title">
-          Suas dúvidas respondidas<br>
-          <span style="color:var(--gold-dark); font-style:italic;">com honestidade</span>
-        </h2>
-        <p class="natural-p">
-          Sabemos que a decisão de fazer uma rinoplastia envolve muito mais do que encontrar um bom médico. Envolve coragem, confiança e informação. Por isso, respondemos as perguntas que você ainda não fez.
-        </p>
-        <div class="objection-list">
-          <div class="objection-item">
-            <div class="objection-q" onclick="toggleObjestion(this)">
-              O resultado vai parecer "operado"?
-              <span class="arrow">+</span>
-            </div>
-            <div class="objection-a">
-              <div class="objection-a-inner">Nossa abordagem é baseada em harmonia facial individualizada. Estudamos cada ângulo, cada proporção do seu rosto antes de planejar qualquer intervenção. O objetivo é que o resultado seja tão natural que apenas você saiba que fez a cirurgia.</div>
-            </div>
-          </div>
-          <div class="objection-item">
-            <div class="objection-q" onclick="toggleObjestion(this)">
-              A recuperação é muito dolorosa e demorada?
-              <span class="arrow">+</span>
-            </div>
-            <div class="objection-a">
-              <div class="objection-a-inner">Com a técnica piezoeléctrica que utilizamos, o edema e a dor são significativamente menores. A maioria dos pacientes retorna às atividades normais em 10 a 14 dias, e a maioria do inchaço se resolve em 3 a 4 semanas. O resultado final consolida em 6 a 12 meses.</div>
-            </div>
-          </div>
-          <div class="objection-item">
-            <div class="objection-q" onclick="toggleObjestion(this)">
-              E se eu não gostar do resultado?
-              <span class="arrow">+</span>
-            </div>
-            <div class="objection-a">
-              <div class="objection-a-inner">Por isso fazemos o planejamento digital em 3D antes da cirurgia. Você visualiza e aprova o resultado esperado com antecedência. Além disso, nosso acompanhamento pós-operatório é completo — e estamos aqui para qualquer ajuste necessário.</div>
-            </div>
-          </div>
-          <div class="objection-item">
-            <div class="objection-q" onclick="toggleObjestion(this)">
-              Existe risco de complicações sérias?
-              <span class="arrow">+</span>
-            </div>
-            <div class="objection-a">
-              <div class="objection-a-inner">Toda cirurgia tem riscos, e somos transparentes sobre isso. Nossa taxa de complicações sérias é inferior a 1%, reflexo direto do rigoroso protocolo pré-operatório, da tecnologia utilizada e da equipe experiente que nos acompanha em cada procedimento.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="natural-visual fade-up fade-up-delay-2">
-        <div class="result-card">
-          <div class="result-icon">✨</div>
-          <div>
-            <div class="result-title">100% Personalizado</div>
-            <p class="result-desc">Nenhuma cirurgia é igual à outra. Cada planejamento começa do zero, com foco exclusivo no seu rosto e no seu objetivo.</p>
-          </div>
-        </div>
-        <div class="result-card">
-          <div class="result-icon">🧬</div>
-          <div>
-            <div class="result-title">Técnica de Última Geração</div>
-            <p class="result-desc">Utilizamos tecnologia piezoelétrica que preserva tecidos moles, reduz sangramento e acelera a recuperação.</p>
-          </div>
-        </div>
-        <div class="result-card">
-          <div class="result-icon">🤝</div>
-          <div>
-            <div class="result-title">Você nunca está sozinho</div>
-            <p class="result-desc">Acesso direto ao Dr. Alexandre antes, durante e após o processo. Suporte real, não atendimento de escritório.</p>
-          </div>
-        </div>
-        <div class="result-card">
-          <div class="result-icon">📐</div>
-          <div>
-            <div class="result-title">Simulação Digital Prévia</div>
-            <p class="result-desc">Veja o resultado esperado antes de decidir. Transparência total no planejamento para sua total segurança.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="functional">
-  <div class="container">
-    <div class="func-grid">
-      <div class="func-image-block fade-up">
-        <div class="func-image-main">
-          <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="0.8">
-            <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
-            <circle cx="12" cy="9" r="2.5"/>
-          </svg>
-          <div class="func-stat-overlay">
-            <div class="func-stat">
-              <div class="func-stat-num">96%</div>
-              <div class="func-stat-label">Melhora na respiração</div>
-            </div>
-            <div class="func-stat">
-              <div class="func-stat-num">2x</div>
-              <div class="func-stat-label">Qualidade do sono</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="fade-up fade-up-delay-2">
-        <div class="section-label">Rinoplastia Funcional</div>
-        <h2 class="section-title func-title">
-          Quando o nariz bonito<br>
-          <span style="color:var(--gold-dark); font-style:italic;">também precisa funcionar</span>
-        </h2>
-        <p class="func-p">
-          A maioria das pessoas não sabe que parte do cansaço crônico, da dificuldade para dormir bem e da falta de fôlego vem de um problema estrutural no nariz.
-        </p>
-        <p class="func-p">
-          O septo desviado, as conchas hipertrofiadas e as válvulas nasais comprometidas são causas comuns e tratáveis. E o melhor: a correção pode ser feita em conjunto com a melhora estética, em uma única cirurgia.
-        </p>
-        <div class="func-benefits">
-          <div class="func-benefit">
-            <div class="func-benefit-dot">→</div>
-            <span>Septos desviados corrigidos com precisão milimétrica</span>
-          </div>
-          <div class="func-benefit">
-            <div class="func-benefit-dot">→</div>
-            <span>Válvulas nasais reconstruídas para fluxo de ar ideal</span>
-          </div>
-          <div class="func-benefit">
-            <div class="func-benefit-dot">→</div>
-            <span>Conchas nasais reduzidas com técnica conservadora</span>
-          </div>
-          <div class="func-benefit">
-            <div class="func-benefit-dot">→</div>
-            <span>Ronco reduzido e qualidade de sono restaurada</span>
-          </div>
-          <div class="func-benefit">
-            <div class="func-benefit-dot">→</div>
-            <span>Resultado estético e funcional em um único procedimento</span>
-          </div>
-        </div>
-        <a href="#contact" class="btn-primary" style="margin-top:32px; background:var(--navy); color:var(--white);">
-          Avaliar minha respiração
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="container">
-    <div class="process-header fade-up">
-      <div class="section-label" style="justify-content:center;">Passo a Passo</div>
-      <h2 class="section-title" style="color:var(--navy);">
-        Do primeiro contato à<br>
-        <span style="color:var(--gold-dark); font-style:italic;">sua vida transformada</span>
-      </h2>
-    </div>
-    <div class="process-steps">
-      <div class="step-item fade-up fade-up-delay-1">
-        <div class="step-number">1</div>
-        <div class="step-title">Consulta de Avaliação</div>
-        <p class="step-desc">Analisamos seu histórico, realizamos a avaliação facial completa e alinhamos expectativas com total transparência.</p>
-      </div>
-      <div class="step-item fade-up fade-up-delay-2">
-        <div class="step-number">2</div>
-        <div class="step-title">Planejamento Digital</div>
-        <p class="step-desc">Simulamos o resultado em 3D para que você veja e aprove antes de qualquer decisão. Você estará no controle.</p>
-      </div>
-      <div class="step-item fade-up fade-up-delay-3">
-        <div class="step-number">3</div>
-        <div class="step-title">Procedimento Seguro</div>
-        <p class="step-desc">Cirurgia realizada com tecnologia de ponta, em ambiente hospitalar certificado, com toda equipe especializada.</p>
-      </div>
-      <div class="step-item fade-up fade-up-delay-4">
-        <div class="step-number">4</div>
-        <div class="step-title">Recuperação & Resultado</div>
-        <p class="step-desc">Acompanhamento dedicado em cada etapa da recuperação até o resultado final consolidado. Você não está sozinho.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="fade-up">
-        <div class="section-label" style="color:var(--gold);">Agende sua Consulta</div>
-        <h2 class="section-title contact-title">
-          Dê o primeiro passo para<br>
-          <span style="color:var(--gold); font-style:italic;">a sua transformação</span>
-        </h2>
-        <p class="contact-p">
-          Preencha o formulário ao lado e nossa equipe entrará em contato em até 24 horas para agendar sua consulta de avaliação.
-        </p>
-        <div class="urgency-box">
-          <p><strong>Vagas limitadas para consultas este mês.</strong> Para garantir o atendimento personalizado que cada paciente merece, limitamos o número de novas consultas mensais.</p>
-          <div class="urgency-spots">
-            <div class="spot-dots">
-              <div class="spot-dot"></div>
-              <div class="spot-dot"></div>
-              <div class="spot-dot"></div>
-              <div class="spot-dot taken"></div>
-              <div class="spot-dot taken"></div>
-            </div>
-            <span class="urgency-label">3 de 5 vagas disponíveis este mês</span>
-          </div>
-        </div>
-        <div class="contact-guarantees">
-          <div class="guarantee-item">Consulta de avaliação completa e personalizada</div>
-          <div class="guarantee-item">Simulação digital do resultado sem compromisso</div>
-          <div class="guarantee-item">Atendimento direto com o Dr. Alexandre Nunes</div>
-          <div class="guarantee-item">Sem pressão, sem vendas — apenas informação</div>
-          <div class="guarantee-item">Sigilo absoluto de todas as informações</div>
-        </div>
-      </div>
-      <div class="fade-up fade-up-delay-2">
-        <div class="form-card">
-          <div id="form-content">
-            <h3 class="form-title">Solicitar Avaliação</h3>
-            <p class="form-subtitle">Preencha os dados abaixo. É rápido, simples e sem compromisso.</p>
-            <div class="wizard-steps">
-              <div class="wizard-step active" id="ws-1"></div>
-              <div class="wizard-step" id="ws-2"></div>
-              <div class="wizard-step" id="ws-3"></div>
-            </div>
-
-            <div class="wizard-screen visible" id="step-1">
-              <p class="form-step-label">Passo <span>1 de 3</span> — Informações básicas</p>
-              <div class="form-group">
-                <label class="form-label">Nome completo</label>
-                <input type="text" class="form-input" placeholder="Seu nome" id="f-nome">
-              </div>
-              <div class="form-group">
-                <label class="form-label">WhatsApp</label>
-                <input type="tel" class="form-input" placeholder="(11) 99999-9999" id="f-tel">
-              </div>
-              <div class="form-group">
-                <label class="form-label">E-mail</label>
-                <input type="email" class="form-input" placeholder="seu@email.com" id="f-email">
-              </div>
-              <div class="form-actions">
-                <button class="btn-form-next" onclick="nextStep(2)">Próximo passo →</button>
-              </div>
-            </div>
-
-            <div class="wizard-screen" id="step-2">
-              <p class="form-step-label">Passo <span>2 de 3</span> — Sobre sua necessidade</p>
-              <div class="form-group">
-                <label class="form-label">Qual é o principal motivo da sua consulta?</label>
-                <div class="radio-grid">
-                  <label class="radio-option" onclick="selectRadio(this, 'motivo')">
-                    <input type="radio" name="motivo" value="estetico">
-                    <div class="radio-dot"></div>
-                    Estético apenas
-                  </label>
-                  <label class="radio-option" onclick="selectRadio(this, 'motivo')">
-                    <input type="radio" name="motivo" value="funcional">
-                    <div class="radio-dot"></div>
-                    Funcional apenas
-                  </label>
-                  <label class="radio-option" onclick="selectRadio(this, 'motivo')">
-                    <input type="radio" name="motivo" value="ambos">
-                    <div class="radio-dot"></div>
-                    Estético + Funcional
-                  </label>
-                  <label class="radio-option" onclick="selectRadio(this, 'motivo')">
-                    <input type="radio" name="motivo" value="revisao">
-                    <div class="radio-dot"></div>
-                    Revisão de rinoplastia
-                  </label>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="subtitle">RINOPLASTIA PERSONALIZADA</span>
+                <h1>Seu nariz em harmonia<br>com o seu rosto</h1>
+                <p class="sub-heading">Natural, funcional e feito para você.</p>
+                <p class="hero-description">Rinoplastia que valoriza sua identidade, melhora sua respiração e devolve sua autoestima com resultados naturais e duradouros.</p>
+                
+                <div class="hero-features">
+                    <!-- Ícones desenhados com CSS/SVGs ou FontAwesome compatível -->
+                    <div class="hero-feature">
+                        <!-- Espera para ícone customizado ou usando FA -->
+                        <i class="fa-solid fa-award" aria-hidden="true"></i>
+                        <span>+26 anos<br>de experiência</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                        <span>Resultados<br>naturais</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <span>Atendimento em<br>Brasília, Goiânia e São Paulo</span>
+                    </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Você já fez alguma cirurgia no nariz?</label>
-                <select class="form-select" id="f-hist">
-                  <option value="">Selecione...</option>
-                  <option>Não, seria a primeira vez</option>
-                  <option>Sim, uma vez</option>
-                  <option>Sim, mais de uma vez</option>
-                </select>
-              </div>
-              <div class="form-actions">
-                <button class="btn-form-back" onclick="nextStep(1)">← Voltar</button>
-                <button class="btn-form-next" onclick="nextStep(3)">Próximo passo →</button>
-              </div>
-            </div>
 
-            <div class="wizard-screen" id="step-3">
-              <p class="form-step-label">Passo <span>3 de 3</span> — Últimas informações</p>
-              <div class="form-group">
-                <label class="form-label">Cidade onde você mora</label>
-                <input type="text" class="form-input" placeholder="Cidade, Estado" id="f-cidade">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Melhor horário para contato</label>
-                <select class="form-select" id="f-horario">
-                  <option value="">Selecione...</option>
-                  <option>Manhã (8h – 12h)</option>
-                  <option>Tarde (12h – 18h)</option>
-                  <option>Noite (18h – 21h)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Como nos encontrou? (opcional)</label>
-                <select class="form-select" id="f-origem">
-                  <option value="">Selecione...</option>
-                  <option>Instagram</option>
-                  <option>Google</option>
-                  <option>Indicação de amigo</option>
-                  <option>Indicação médica</option>
-                  <option>Outro</option>
-                </select>
-              </div>
-              <div class="form-actions">
-                <button class="btn-form-back" onclick="nextStep(2)">← Voltar</button>
-                <button class="btn-form-submit" onclick="submitForm()">Solicitar minha avaliação</button>
-              </div>
+                <div class="hero-cta-wrapper">
+                    <a href="#agendar" class="btn btn-primary btn-large">QUERO AVALIAR MEU CASO <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <p class="hero-small-text"><i class="fa-regular fa-clock" aria-hidden="true"></i> Atendimento humanizado e exclusivo</p>
+                </div>
             </div>
-          </div>
-
-          <div class="form-success" id="form-success">
-            <div class="success-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-            </div>
-            <h3 class="success-title">Solicitação recebida!</h3>
-            <p class="success-text">Nossa equipe entrará em contato com você em até 24 horas pelo WhatsApp informado para confirmar sua consulta de avaliação com o Dr. Alexandre Nunes.</p>
-            <p class="success-text" style="margin-top:14px; font-size:0.85rem; color:var(--text-light);">Enquanto isso, siga nosso Instagram para ver resultados reais de pacientes.</p>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+        
+        <!-- SELO FLUTUANTE INFERIOR DIREITO -->
+        <div class="floating-badge">
+            Mais de<br>3.000 cirurgias<br>realizadas
+        </div>
+    </section>
 
-<footer>
-  <div class="container">
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand-name">Dr. Alexandre <span>Nunes</span></div>
-        <p class="footer-brand-desc">Especialista em Rinoplastia Estética e Funcional. Resultados naturais com técnica de precisão e acompanhamento humanizado.</p>
-      </div>
-      <div>
-        <div class="footer-heading">Navegação</div>
-        <ul class="footer-links">
-          <li><a href="#identification">Sobre o Dr. Alexandre</a></li>
-          <li><a href="#differentials">Diferenciais</a></li>
-          <li><a href="#natural">Resultados</a></li>
-          <li><a href="#functional">Rinoplastia Funcional</a></li>
-          <li><a href="#process">Como Funciona</a></li>
-          <li><a href="#contact">Agendar Consulta</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-heading">Contato</div>
-        <ul class="footer-links">
-          <li><a href="#">📍 São Paulo, SP</a></li>
-          <li><a href="#">📞 (11) 9xxxx-xxxx</a></li>
-          <li><a href="#">✉️ contato@dralexandrenunes.com.br</a></li>
-          <li><a href="#">📷 @dralexandrenunes</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">&copy; 2026 Dr. Alexandre Nunes — Todos os direitos reservados.</span>
-      <span class="footer-crm">CRM-SP 123456 | Especialista em Cirurgia Plástica — CFM</span>
-    </div>
-  </div>
-</footer>
+        <!-- SEÇÃO: PONTOS DE DOR -->
+    <section id="rinoplastia" class="pain-points" aria-labelledby="pain-points-title">
+        <div class="container pain-points-container">
+            <!-- Textos à esquerda -->
+            <div class="pain-points-text">
+                <h2 id="pain-points-title">Você se incomoda com algum desses aspectos?</h2>
+                <p>Pequenos detalhes podem afetar como você se sente todos os dias.</p>
+            </div>
+            
+            <!-- 6 Cartões à direita -->
+            <div class="pain-points-grid">
+    
+            <article class="card-icon">
+                <img src="assets/caida.png" alt="Ícone Ponta caída" class="pain-icon">
+                <p>Ponta<br>caída</p>
+            </article>
+            
+            <article class="card-icon">
+                <img src="assets/batatuda.png" alt="Ícone Ponta batatuda" class="pain-icon">
+                <p>Ponta<br>batatuda</p>
+            </article>
+            
+            <article class="card-icon">
+                <img src="assets/alto.png" alt="Ícone Dorso alto" class="pain-icon">
+                <p>Dorso<br>alto</p>
+            </article>
+            
+            <article class="card-icon">
+                <img src="assets/torto.png" alt="Ícone Dorso torto" class="pain-icon">
+                <p>Dorso<br>torto</p>
+            </article>
+            
+            <article class="card-icon">
+                <img src="assets/asa larga.png" alt="Ícone Asa larga" class="pain-icon">
+                <p>Asa<br>larga</p>
+            </article>
+            
+            <article class="card-icon">
+                <img src="assets/baixo.png" alt="Ícone Dorso baixo" class="pain-icon">
+                <p>Dorso baixo<br>(negroide)</p>
+            </article>
+            
+        </div>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+        <!-- SEÇÃO: SOBRE A CIRURGIA / BENEFÍCIOS -->
+    <section id="beneficios" class="about" aria-labelledby="about-title">
+        <div class="container about-content">
+            
+            <!-- Bloco das Imagens Esquerda -->
+            <div class="about-images">
+                <!-- Coluna ANTES -->
+                <div class="image-wrapper">
+                    <!-- Espera para a imagem ANTES -->
+                    <img src="assets/before.png" alt="Exemplo de paciente antes da rinoplastia" loading="lazy">
+                    <span class="image-label">ANTES</span>
+                </div>
+                
+                <!-- Coluna DEPOIS -->
+                <div class="image-wrapper">
+                    <!-- Espera para a imagem DEPOIS -->
+                    <img src="assets/after.png" alt="Exemplo de paciente depois da rinoplastia" loading="lazy">
+                    <span class="image-label">DEPOIS</span>
+                </div>
+            </div>
+            
+            <!-- Bloco de Textos Direita -->
+            <div class="about-text">
+                <h2 id="about-title">Mais do que estética,<br>é equilíbrio e bem-estar.</h2>
+                <p>A rinoplastia vai além da aparência. É sobre se sentir bem consigo mesma, respirar melhor e viver com mais confiança.</p>
+                
+                <ul class="check-list">
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Harmonia facial e naturalidade</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Preservação da função respiratória</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Respeito à sua identidade</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Resultados personalizados</li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="unique" aria-labelledby="unique-title">
+        <div class="container">
+            
+            <div class="unique-header">
+                <h2 id="unique-title">Cada nariz é único. Cada cirurgia também.</h2>
+                <p class="section-subtitle">A abordagem é totalmente personalizada para atender às suas necessidades.</p>
+            </div>
+            
+            <div class="unique-grid">
+                <article class="unique-card">
+                    <img src="caminho/para/logo-ponta-caida.svg" alt="Ícone Ponta caída" class="unique-icon">
+                    <div class="unique-text-group">
+                        <h3>Ponta caída</h3>
+                        <p>Reposicionamento estrutural para elevação e leveza.</p>
+                    </div>
+                </article>
+                
+                <article class="unique-card">
+                    <img src="caminho/para/logo-ponta-batatuda.svg" alt="Ícone Ponta batatuda" class="unique-icon">
+                    <div class="unique-text-group">
+                        <h3>Ponta batatuda</h3>
+                        <p>Definição da ponta e ajuste da espessura da pele.</p>
+                    </div>
+                </article>
+                
+                <article class="unique-card">
+                    <img src="caminho/para/logo-dorso-alto.svg" alt="Ícone Dorso alto" class="unique-icon">
+                    <div class="unique-text-group">
+                        <h3>Dorso alto</h3>
+                        <p>Remoção controlada da giba, mantendo a naturalidade.</p>
+                    </div>
+                </article>
+                
+                <article class="unique-card">
+                    <img src="caminho/para/logo-dorso-torto.svg" alt="Ícone Dorso torto" class="unique-icon">
+                    <div class="unique-text-group">
+                        <h3>Dorso torto</h3>
+                        <p>Correção do desvio com alinhamento ósseo e cartilaginoso.</p>
+                    </div>
+                </article>
+                
+                <article class="unique-card">
+                    <img src="caminho/para/logo-asa-larga.svg" alt="Ícone Asa larga" class="unique-icon">
+                    <div class="unique-text-group">
+                        <h3>Asa larga</h3>
+                        <p>Afinamento das asas nasais com naturalidade.</p>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="unique-footer">
+                <div class="alert-box" role="alert">
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i> 
+                    <span>Preservar o ponto K é essencial para manter a estrutura, a função e a naturalidade do nariz.</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+        <section id="sobre" class="doctor" aria-labelledby="doctor-title">
+            <div class="container doctor-content">
+                <div class="doctor-image">
+                    <img src="assets/Alexandre.jpg" alt="Retrato do Dr. Alexandre Nunes" loading="lazy">
+                </div>
+                <div class="doctor-text">
+                    <h2 id="doctor-title">Experiência e precisão que<br>fazem a diferença.</h2>
+                    <p>O Dr. Alexandre Nunes possui mais de 26 anos de experiência em cirurgias plásticas, com foco em rinoplastia estrutural e preservação da função respiratória.</p>
+                    <span class="crm-info">CRM 23816 | RQE 10837</span>
+                    
+                    <div class="doctor-features">
+                        <div class="doc-feat">
+                            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                            <span>Formação nacional<br>e internacional</span>
+                        </div>
+                        <div class="doc-feat">
+                            <i class="fa-solid fa-microscope" aria-hidden="true"></i>
+                            <span>Técnicas avançadas<br>e atualizadas</span>
+                        </div>
+                        <div class="doc-feat">
+                            <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                            <span>Atendimento exclusivo<br>e humanizado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="quiz-section" aria-labelledby="quiz-title">
+            <div class="container">
+                <div class="quiz-container">
+                    <div class="quiz-header">
+                        <h2 id="quiz-title">Descubra a melhor abordagem para o seu caso</h2>
+                        <p>Responda algumas perguntas rápidas e receba uma avaliação inicial personalizada.</p>
+                    </div>
+                    
+                    <div class="quiz-mobile-progress" aria-hidden="true">
+                        <span class="progress-text">Passo <span id="current-step-text">1</span> de 4</span>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" id="quiz-progress-fill"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-layout">
+                        <aside class="quiz-sidebar" aria-label="Passos do formulário">
+                            <button class="quiz-step active" data-step="1">
+                                <span class="step-num">1</span>
+                                <span class="step-text">O que incomoda<br>no seu nariz?</span>
+                            </button>
+                            <button class="quiz-step" data-step="2">
+                                <span class="step-num">2</span>
+                                <span class="step-text">Classifique<br>sua pele</span>
+                            </button>
+                            <button class="quiz-step" data-step="3">
+                                <span class="step-num">3</span>
+                                <span class="step-text">Como é a sua<br>respiração?</span>
+                            </button>
+                            <button class="quiz-step" data-step="4">
+                                <span class="step-num">4</span>
+                                <span class="step-text">Seu caso se encaixa<br>em algum desses?</span>
+                            </button>
+                        </aside>
+                        
+                        <div class="quiz-content" aria-live="polite">
+                            
+                            <div class="quiz-step-content active" id="step-1">
+                                <div class="quiz-options multi-select">
+                                    <button class="quiz-option" type="button" data-value="Ponta caída">
+                                        <img src="assets/caida.png" alt="Ícone Ponta caída" class="quiz-custom-icon">
+                                        <span>Ponta caída</span>
+                                    </button>
+                                    <button class="quiz-option" type="button" data-value="Ponta batatuda">
+                                        <img src="assets/batatuda.png" alt="Ícone Ponta batatuda" class="quiz-custom-icon">
+                                        <span>Ponta batatuda</span>
+                                    </button>
+                                    <button class="quiz-option" type="button" data-value="Dorso alto">
+                                        <img src="assets/alto.png" alt="Ícone Dorso alto" class="quiz-custom-icon">
+                                        <span>Dorso alto</span>
+                                    </button>
+                                    <button class="quiz-option" type="button" data-value="Dorso torto">
+                                        <img src="assets/torto.png" alt="Ícone Dorso torto" class="quiz-custom-icon">
+                                        <span>Dorso torto</span>
+                                    </button>
+                                    <button class="quiz-option" type="button" data-value="Asa larga">
+                                        <img src="assets/asa larga.png" alt="Ícone Asa larga" class="quiz-custom-icon">
+                                        <span>Asa larga</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="quiz-step-content" id="step-2">
+                                <div class="quiz-options single-select">
+                                    <button class="quiz-option" type="button" data-value="Pele Fina">
+                                        <div class="skin-circle-wrapper">
+                                            <div class="skin-circle skin-thin"></div>
+                                        </div>
+                                        <span>Pele Fina</span>
+                                    </button>
+                                    <button class="quiz-option" type="button" data-value="Pele Média">
+                                        <div class="skin-circle-wrapper">
+                                            <div class="skin-circle skin-medium"></div>
+                                        </div>
+                                        <span>Pele Média</span>
+                                    </button>
+                                    <button class="quiz-option" type="button" data-value="Pele Grossa">
+                                        <div class="skin-circle-wrapper">
+                                            <div class="skin-circle skin-thick"></div>
+                                        </div>
+                                        <span>Pele Grossa</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="quiz-step-content" id="step-3">
+                                <div class="quiz-options single-select">
+                                    <button class="quiz-option" type="button" data-value="Respiro bem">
+                                        <i class="fa-solid fa-wind" aria-hidden="true"></i>
+                                        <span>Respiro bem</span>
+                                    </button>
+                                    <button class="quiz-option" type="button" data-value="Obstrução Leve">
+                                        <i class="fa-solid fa-lungs" aria-hidden="true"></i>
+                                        <span>Obstrução Leve</span>
+                                    </button>
+                                    <button class="quiz-option" type="button" data-value="Obstrução Severa">
+                                        <i class="fa-solid fa-lungs-virus" aria-hidden="true"></i>
+                                        <span>Obstrução Severa</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="quiz-step-content" id="step-4">
+                                <div class="quiz-options multi-select">
+                                    <button class="quiz-option" type="button" data-value="Desvio de Septo">
+                                        <i class="fa-solid fa-x-ray" aria-hidden="true"></i>
+                                        <span>Desvio de Septo</span>
+                                    </button>
+                                    <button class="quiz-option" type="button" data-value="Trauma/Fratura">
+                                        <i class="fa-solid fa-crutch" aria-hidden="true"></i>
+                                        <span>Trauma Anterior</span>
+                                    </button>
+                                    <button class="quiz-option" type="button" data-value="Rinoplastia Secundária">
+                                        <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
+                                        <span>Já fiz rinoplastia</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="quiz-step-content" id="step-result">
+                                <div class="result-box">
+                                    <i class="fa-regular fa-circle-check result-icon"></i>
+                                    <h3>Avaliação Pronta!</h3>
+                                    <p>Suas respostas foram registradas. Envie sua pré-avaliação para nossa equipe realizar o agendamento.</p>
+                                    
+                                    <div class="result-actions">
+                                        <a href="#" id="btn-whatsapp" class="btn btn-whatsapp-share" target="_blank">
+                                            <i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-actions" id="quiz-footer-actions">
+                                <button class="btn btn-outline-dark" id="btn-prev-step" style="display: none;">Voltar</button>
+                                <button class="btn btn-primary" id="btn-next-step">PRÓXIMO <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-boxes" aria-label="Vantagens do procedimento">
+            <div class="container">
+                <div class="info-grid">
+                    <article class="info-card">
+                        <i class="fa-solid fa-lungs" aria-hidden="true"></i>
+                        <div class="info-card-content">
+                            <h4>Respirar bem faz parte do resultado</h4>
+                            <p>Em muitos casos, a rinoplastia corrige desvios de septo, obstruções e melhora significativamente a respiração.</p>
+                        </div>
+                    </article>
+                    <article class="info-card">
+                        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                        <div class="info-card-content">
+                            <h4>Naturalidade é prioridade</h4>
+                            <p>Nada de resultados artificiais. O objetivo é que você se sinta melhor, sem que percebam que você fez cirurgia.</p>
+                        </div>
+                    </article>
+                    <article class="info-card">
+                        <i class="fa-solid fa-face-smile" aria-hidden="true"></i>
+                        <div class="info-card-content">
+                            <h4>Sua autoestima merece esse cuidado</h4>
+                            <p>Você merece se olhar no espelho e gostar do que vê. Vamos juntos nessa transformação.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="agendar" class="bottom-cta" aria-label="Agendamento">
+            <div class="container bottom-cta-container">
+                
+                <div class="cta-image-wrapper">
+                    <img src="assets/perfil.png" alt="Mulher de perfil evidenciando o nariz" class="cta-image">
+                </div>
+                
+                <div class="bottom-cta-text">
+                    <h2>Os horários são limitados para avaliação.</h2>
+                    <p>Agende agora sua consulta e dê o primeiro passo para se sentir bem com o seu rosto.</p>
+                </div>
+                
+                <div class="bottom-cta-action">
+                    <a href="#" class="btn btn-cta-transparent">AGENDAR AVALIAÇÃO <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <p class="location-info">
+                        <i class="fa-regular fa-clock" aria-hidden="true"></i> 
+                        Atendimento em Brasília, Goiânia e São Paulo
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col brand-col">
+                    <div class="footer-brand">
+                        <div class="logo-image-placeholder">
+                            <img src="assets/logo_v_r.png" alt="Logo AN" id="footer-logo-img">
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-name">DR. ALEXANDRE NUNES</span>
+                            <span class="brand-sub">RINOPLASTIA</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">Rinoplastia personalizada que une arte, ciência e respeito à sua identidade.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <nav aria-label="Navegação do rodapé">
+                        <ul>
+                            <li><a href="#inicio">Início</a></li>
+                            <li><a href="#sobre">Sobre o Dr. Alexandre</a></li>
+                            <li><a href="#rinoplastia">Rinoplastia</a></li>
+                            <li><a href="#resultados">Resultados</a></li>
+                            <li><a href="#depoimentos">Depoimentos</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <address class="footer-address">
+                        <p>Brasília - DF</p>
+                        <p>Goiânia - GO</p>
+                        <p>São Paulo - SP</p>
+                    </address>
+                    <a href="#" class="btn btn-whatsapp-outline">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> FALAR NO WHATSAPP
+                    </a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Informações</h4>
+                    <ul class="footer-info-list">
+                        <li>CRM 23816</li>
+                        <li>RQE 10837</li>
+                    </ul>
+                    <div class="social-links" aria-label="Redes sociais">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 Dr. Alexandre Nunes. Todos os direitos reservados.</div>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de Privacidade</a>
+                    <span class="separator">|</span>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
